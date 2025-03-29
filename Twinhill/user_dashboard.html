@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Payroll System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Payroll System</h2>
+                <p>User Dashboard</p>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="user_dashboard.html">My Payslips</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <h1>My Payslips</h1>
+                <div class="user-info">
+                    <span id="usernameDisplay"></span>
+                </div>
+            </header>
+            <div class="content">
+                <div class="payslips-list">
+                    <h2>Available Payslips</h2>
+                    <div class="filter-controls">
+                        <div class="form-group">
+                            <label for="filterMonth">Filter by Month</label>
+                            <input type="month" id="filterMonth">
+                            <button id="applyFilter" class="btn">Filter</button>
+                        </div>
+                    </div>
+                    <table id="payslipsTable">
+                        <thead>
+                            <tr>
+                                <th>Month/Year</th>
+                                <th>Description</th>
+                                <th>Upload Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Payslips will be loaded here via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/user_dashboard.js"></script>
+</body>
+</html>

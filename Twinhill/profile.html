@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Payroll System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Payroll System</h2>
+                <p>My Profile</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="user_dashboard.html">Dashboard</a></li>
+                    <li class="active"><a href="profile.html">Profile</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <h1>My Profile</h1>
+                <div class="user-info">
+                    <span id="usernameDisplay"></span>
+                </div>
+            </header>
+            <div class="content">
+                <div class="profile-section">
+                    <form id="profileForm">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password (leave blank to keep unchanged)</label>
+                            <input type="password" id="currentPassword" name="current_password">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" id="newPassword" name="new_password">
+                        </div>
+                        <button type="submit" class="btn">Update Profile</button>
+                        <div id="profileMessage" class="message"></div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/profile.js"></script>
+</body>
+</html>

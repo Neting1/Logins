@@ -1,0 +1,348 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4a5568;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #5a67d8;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 1rem;
+    color: #4a5568;
+}
+
+.register-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #e53e3e;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* dashboard.css */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #2d3748;
+    color: white;
+    padding: 1.5rem 0;
+}
+
+.sidebar-header {
+    padding: 0 1.5rem 1.5rem;
+    border-bottom: 1px solid #4a5568;
+}
+
+.sidebar-header h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.sidebar-header p {
+    font-size: 0.875rem;
+    color: #a0aec0;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 0.25rem;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #4a5568;
+    color: white;
+}
+
+.sidebar nav ul li.active a {
+    background-color: #667eea;
+    color: white;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #f7fafc;
+}
+
+.main-header {
+    padding: 1.5rem;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    font-size: 1.5rem;
+    color: #2d3748;
+}
+
+.user-info {
+    color: #4a5568;
+}
+
+.content {
+    padding: 1.5rem;
+}
+
+.upload-section, .payslips-list, .admin-controls, .filter-controls {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.upload-section h2, .payslips-list h2, .admin-controls h2 {
+    margin-bottom: 1rem;
+    color: #2d3748;
+    font-size: 1.25rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+table th {
+    background-color: #f7fafc;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+table tr:hover {
+    background-color: #f7fafc;
+}
+
+.action-btn {
+    padding: 0.375rem 0.75rem;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #5a67d8;
+}
+
+.action-btn.delete {
+    background-color: #e53e3e;
+}
+
+.action-btn.delete:hover {
+    background-color: #c53030;
+}
+
+/* admin.css */
+.filter-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+
+.filter-controls .form-group {
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.filter-controls .btn {
+    width: auto;
+    padding: 0.5rem 1rem;
+}
+
+/* Payslip table styles */
+.payslips-list {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.payslips-list h2 {
+    margin-bottom: 1rem;
+    color: #2d3748;
+    font-size: 1.25rem;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: flex-end;
+}
+
+.filter-controls .form-group {
+    margin-bottom: 0;
+}
+
+.filter-controls .btn {
+    padding: 0.5rem 1rem;
+    height: fit-content;
+}
+
+.action-btn {
+    padding: 0.375rem 0.75rem;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #5a67d8;
+}
+
+.action-btn.view {
+    background-color: #48bb78;
+}
+
+.action-btn.view:hover {
+    background-color: #38a169;
+}
+
+.profile-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.message {
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.message.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.message.info {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #90caf9;
+}

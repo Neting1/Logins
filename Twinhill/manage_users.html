@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users - Payroll System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Payroll System</h2>
+                <p>Admin Dashboard</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="admin_dashboard.html">Manage Payslips</a></li>
+                    <li class="active"><a href="manage_users.html">Manage Users</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Manage Users</h1>
+                <div class="user-info">
+                    <span id="usernameDisplay"></span>
+                    <span>(Admin)</span>
+                </div>
+            </header>
+            <div class="content">
+                <div class="users-list">
+                    <div class="admin-controls">
+                        <button id="addUserBtn" class="btn">Add New User</button>
+                        <div class="search-box">
+                            <input type="text" id="searchUsers" placeholder="Search users...">
+                            <button id="searchBtn" class="btn">Search</button>
+                        </div>
+                    </div>
+                    <table id="usersTable">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Created</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Users will be loaded here via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/manage_users.js"></script>
+</body>
+</html>

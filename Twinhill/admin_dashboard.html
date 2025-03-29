@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Payroll System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Payroll System</h2>
+                <p>Admin Dashboard</p>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="admin_dashboard.html">Manage Payslips</a></li>
+                    <li><a href="manage_users.html">Manage Users</a></li>
+                    <li><a href="admin_profile.html">Profile</a></li>
+                    <li><a href="#" id="logoutBtn">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Manage Payslips</h1>
+                <div class="user-info">
+                    <span id="usernameDisplay"></span>
+                    <span>(Admin)</span>
+                </div>
+            </header>
+            <div class="content">
+                <div class="admin-controls">
+                    <h2>Upload Payslip for User</h2>
+                    <form id="adminUploadForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="userSelect">Select User</label>
+                            <select id="userSelect" name="userId" required>
+                                <!-- Users will be loaded here via JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="adminMonthYear">Month/Year</label>
+                            <input type="month" id="adminMonthYear" name="monthYear" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adminPayslipFile">Payslip File (PDF only)</label>
+                            <input type="file" id="adminPayslipFile" name="payslipFile" accept=".pdf" required>
+                        </div>
+                        <button type="submit" class="btn">Upload</button>
+                    </form>
+                </div>
+                <div class="payslips-list">
+                    <h2>All Payslips</h2>
+                    <div class="filter-controls">
+                        <div class="form-group">
+                            <label for="filterUser">Filter by User</label>
+                            <select id="filterUser">
+                                <option value="all">All Users</option>
+                                <!-- Users will be loaded here via JavaScript -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="filterMonth">Filter by Month</label>
+                            <input type="month" id="filterMonth">
+                        </div>
+                        <button id="applyFilter" class="btn">Apply Filter</button>
+                    </div>
+                    <table id="adminPayslipsTable">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Month/Year</th>
+                                <th>File Name</th>
+                                <th>Upload Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- All payslips will be loaded here via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/admin_dashboard.js"></script>
+</body>
+</html>
